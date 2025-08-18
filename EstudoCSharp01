@@ -1,0 +1,65 @@
+using ConsoleApp2; // Importa a classe Pessoa do namespace ConsoleApp2
+using System; // como se fosse #include em C
+using System.Linq.Expressions;
+namespace AprenderCsharp
+{
+    class Program
+    {
+        static void Main() // como se fosse o int main() em C
+        {
+            float num = -1;
+            bool perda = false;
+            bool ganho = true;
+            
+            if(num > 0)
+            {
+                Console.WriteLine("Número positivo");
+                Console.WriteLine(ganho);
+            }else if(num < 0)
+            {
+                Console.WriteLine("Número negativo");
+                Console.WriteLine(perda);
+            }
+            else
+            {
+                Console.WriteLine("Número neutro");
+            }
+
+            // função
+            void Exemplo(string nome) // void não retorna valor
+            {
+                Console.WriteLine(nome);
+            }
+
+            Exemplo("João");
+
+            // fim função
+
+
+            // arrays e foreach
+            string[] frutas = { "maçã", "banana", "laranja" };
+            foreach(string fruta in frutas)
+            {
+                Console.WriteLine(fruta);
+                Console.WriteLine(frutas[0]); // exibira "maça"
+            }
+            // fim arrays e foreach
+
+            // classes e objetos
+            Pessoa p = new Pessoa();
+            p.nome = "João";
+            p.idade = 30;
+            p.cpf = "121.558.579-93";
+            p.Apresentar();
+            // fim classes e objetos
+
+            Console.ReadKey(); // Mantem a janela aberta
+        }
+    }
+}
+
+/*
+operador E: &&
+operador OU: ||
+operador NEGAÇÃO: !
+*/
